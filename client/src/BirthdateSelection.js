@@ -80,6 +80,10 @@ function BirthdateSelection() {
           crush: crush.value,
         }
       );
+      localStorage.setItem('birthdate', birthdate);
+      localStorage.setItem('gender', gender);
+      localStorage.setItem('interests', JSON.stringify(interests));
+      localStorage.setItem('crush', JSON.stringify(crush));
 
       console.log("Request data:", {
         googleId,
