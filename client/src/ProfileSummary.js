@@ -1,38 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 
 const ProfileSummary = () => {
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState({
+    name: localStorage.getItem('name'),
+    email: localStorage.getItem('email'),
+    birthdate: localStorage.getItem('birthdate'),
+    gender: localStorage.getItem('gender'),
+    interests: JSON.parse(localStorage.getItem('interests')),
+    crush: localStorage.getItem('crush'),
+  });
 
   useEffect(() => {
-    const fetchUserData = async () => {
-      const googleId = localStorage.getItem('googleId'); // Retrieve googleId from local storage
-
-      if (!googleId) {
-        console.error('No googleId found in local storage');
-        return;
-      }
-
-      try {
-        const response = await axios.get(`http://localhost:3000/users/${googleId}`);
-        setUserData(response.data);
-      } catch (error) {
-        console.error('Failed to fetch user data:', error);
-      }
-    };
-
-    fetchUserData();
+    // If any of the required fields are missing, log an error and return
+    if (!userData.name || !userData.email || !userData.birthdate || !userData.gender || !userData.interests || !userData.crush) {
+      console.error('Missing user data in local storage');
+      return;
+    }
   }, []);
-
-  if (!userData) {
-    return <div>Loading...</div>;
-  }
-
 
   return (
     <div>
       <h1>{userData.name}</h1>
-      <img src={userData.picture} alt={userData.name} />
       <p>Email: {userData.email}</p>
       <p>Birthdate: {userData.birthdate}</p>
       <p>Gender: {userData.gender}</p>

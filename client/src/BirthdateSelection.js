@@ -26,6 +26,8 @@ function BirthdateSelection() {
   if (location.state) {
     ({ name, email, imageUrl, googleId } = location.state);
     localStorage.setItem('googleId', googleId);
+    localStorage.setItem("name",name);
+    localStorage.setItem("email", email);
   }
 
   const interestOptions = [

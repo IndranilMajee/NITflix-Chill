@@ -1,62 +1,415 @@
-/* index.css */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Protest+Revolution&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body{
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    
+}
+.datinglogin-taH{
+    width: 100vw;
+    height:100vh;
+    background-color: #ffb9db;
+    position:absolute;
 }
 
-.container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-}
+.group-706-wws {
+    width:7rem;
+    
+    position: absolute;
+    
+    top: 0;
+    right:0;
+    animation: rightflower 1.5s ease-in;
+    animation-iteration-count: 1;
+    
+    /* vertical-align: top; */
+    
+  }
+  @keyframes rightflower {
+    from{
+        top:0%;
+        right:-10%;
+        opacity:0;
+    }
+    to{
+        top:0;
+        right:0;
+        opacity:100%;
+    }
+  }
+ 
+  .group-701-ebP {
+    width: 15rem;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: leftflower 1.5s ease-in;
+    animation-iteration-count: 1;
+ 
+  }
+  @keyframes leftflower {
+    from{
+        top:0%;
+        left:-10%;
+        opacity:0;
+    }
+    to{
+        top:0;
+        left:0;
+        opacity:100%;
+    }
+  }
+.group-702-1xH{
+    width: 20rem;
+    position:absolute;
+    right:0;
+    bottom: 0;
+    animation: bottomflower 1.5s ease-in;
+    animation-iteration-count: 1;
 
-h1 {
-    color: #333333;
 }
-
-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+@keyframes bottomflower {
+    from{
+        bottom:0%;
+        right:-10%;
+        opacity:0;
+    }
+    to{
+        bottom:0;
+        right:0;
+        opacity:100%;
+    }
+  }
+.group-707-YSR{
+    width: 50rem;
+    position:absolute;
+    left:0;
+    bottom:-5%;
+    animation:buildings 2.5s ease;
+    animation-iteration-count: 1;
 }
-
-label {
-    margin-bottom: 10px;
-    color: #555555;
+@keyframes buildings {
+    from{
+        opacity:0;
+        width:70rem;
+    }
+    to{
+        opacity: 1;
+        width:50rem;
+    }
 }
-
-input {
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.frame-g2q{
+    width: 80rem;
+    left:-15%;
+    bottom:-35%;
+    position:absolute;
+    animation: grass 1.5s ease-in;
+    animation-iteration-count: 1;
 }
-
-button {
-    background-color: #4caf50;
-    color: #ffffff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+@keyframes grass {
+    from{
+        opacity: 0;
+        left:-50%;
+    }
+    to{
+        left:-15%;
+        opacity: 1;
+    }
 }
-
-button:hover {
-    background-color: #45a049;
+.group-708-1au{
+    width: 10rem;
+    position: absolute;
+    left:22%;
+    bottom:10%;
 }
+.frame-LdB{
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top:30%;
+    left:5%;
+    animation: balloon 4s ease-in;
+}
+@keyframes balloon {
+    from{
+        top:-40%;
+    }
+    to{
+        top:30;
+    }
+}
+.group-93-dVF {
+    top:50%;
+    right:32%;
+    position: absolute;
+    
+}.button{
+    color: red;
+}
+.meetme-nBo{
+    position: absolute;
+    left:10%;
+    top:20%;
+}
+.welcome-3MF{
+    position: absolute;
+    font-size: 7rem;
+    right:23%;
+    top:25%;
+    color: #a02d2d;
+    font-family: 'Protest Revolution',sans-serif;
+    animation: welcome 3s forwards;
+ }
+ .quote{
+    position:absolute;
+    font-size: 2rem;
+    font-family:  'Dancing Script', cursive;;
+    left:46%;
+    top:43%;
+    width:38%;
+    color: #a02d2d;
+    animation: quote 8s ;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-iteration-count: 1;
+ }
 
-/* Google Sign-In Button */
-.react-google-login {
-    margin-top: 20px;
+ @keyframes quote {
+    0%{
+        width:0%;
+    
+    }
+    50%{
+        width:0%;
+        
+    }
+    100%{
+        width:38%;
+    }
+ }
+ .logo{
+    width:10%;
+    top:10%;
+    left:5%;
+    position: absolute;
+    animation:logo 6s ;
+ }
+ @keyframes logo {
+    0%{
+        opacity:0%;
+    }
+    40%{
+        opacity:0%;
+    }
+    100%{
+        opacity:100%;
+    }
+ }
+ /*
+
+@keyframes welcome {
+    from{
+        font-size: 4rem;
+        opacity:0;
+    }
+    to{
+        font-size:7rem;
+        opacity: 1;
+    }
+} */
+@media screen and (max-width:600px){
+    .datinglogin-taH{
+        width:100vw;
+        height:100vh;
+    }
+    .frame-LdB{
+        top:20%;
+        left:46%;
+        width:10%;
+        height:7%;
+        animation: none;
+
+    }
+    .logo{
+        top:8%;
+        left:37%;
+        width:30%;
+        height:10%;
+    }
+    .group-701-ebP{
+        top:0;
+        left:0;
+        width:35%;
+    }
+    .group-702-1xH{
+        right:0;
+        bottom:0;
+        width:20%;
+    }
+    .frame-g2q{
+        bottom:-8.5%;
+        left:-15%;
+        width:90%;
+    }
+    .group-707-YSR{
+        bottom:-2%;
+        left:0;
+        width:75%;
+    }
+    .group-706-wws{
+        right:0;
+        top:0;
+        width:10%;
+    }
+    .group-708-1au{
+        width:20%;
+        left:19%;
+        bottom:3%;
+    }
+    .quote{
+        width:90%;
+        top:45%;
+        left:10%;
+        font-size: 1rem;
+
+    }
+    .welcome-3MF{
+        width:90%;
+        left:13%;
+        top:33%;
+        font-size: 4rem;
+    }
+    .group-93-dVF{
+        width:50%;
+        top:47%;
+        left:27%;
+    }
 }

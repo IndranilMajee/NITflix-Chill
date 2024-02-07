@@ -4,9 +4,12 @@ import LoginPage from './LoginPage';
 import SuccessPage from './SuccessPage';
 import BirthdateSelection from './BirthdateSelection';
 import ProfileSummary from './ProfileSummary';
+import background from './background';
 
 function App() {
   return (
+    <>
+    <background/>
     <Router>
       <Routes>
         <Route exact path="/" element={<LoginPage />} />
@@ -16,6 +19,7 @@ function App() {
         <Route path="/profile-summary" element={<ProfileSummary />} />
       </Routes>
     </Router>
+    </>
   );
 }
 
